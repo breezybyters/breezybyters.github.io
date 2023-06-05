@@ -58,3 +58,8 @@ privacyEnhanced = true
   [module.hugoVersion]
     extended = true
     min = "0.104.0"
+
+[build]
+  postCSS = { config = "postcss.config.js"}
+  tailwindCSS = {config = "tailwind.config.js"}
+  writeStats = true

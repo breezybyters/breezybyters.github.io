@@ -26,8 +26,16 @@ EmojiSymbols;
     color: white !important;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.card-box {
+    scroll-snap-align: center;
+}
+
 body {
-    transition: background-color 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 /* Custom CSS end */
