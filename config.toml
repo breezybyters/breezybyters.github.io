@@ -13,7 +13,7 @@ darkmode_js = ["assets/js/darkmode.js"]
 enableInlineShortcodes = true
 
 [params]
-author = "Nusser Studios"
+author = "SalahDin Rezk"
 authorimage = "../assets/images/global/author.webp"
 github = "https://github.com/breezybyters"
 # facebook = "https://facebook.com/nusserstudios"

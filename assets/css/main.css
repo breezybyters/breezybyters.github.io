@@ -4,38 +4,35 @@
 @tailwind components;
 @tailwind utilities;
 
-font-family: ui-sans-serif,
-system-ui,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-Apple Color Emoji,
-Segoe UI Emoji,
-NotoColorEmoji,
-Segoe UI Symbol,
-Android Emoji,
-EmojiSymbols;
 /* Custom CSS */
 
-.prose :where(h1):not(:where([class~="not-prose"] *)) {
-    color: white !important;
+@font-face {
+    font-family: "Primal";
+   src: url("/fonts/Primal.otf") format("opentype");
+}
+
+.font-primal {
+    @apply font-mono;
+    font-family: "Primal";
+    /* @apply tracking-tighter; */
+    letter-spacing: -0.14em;
+
 }
 
 html {
     scroll-snap-type: y mandatory;
 }
 
-.card-box {
-    scroll-snap-align: center;
+/* scroll snap if desktop */
+@media (min-width: 768px) {
+    .scroll-snap {
+        scroll-snap-align: center;
+    }
 }
 
 body {
     transition: all 0.5s ease;
+    @apply font-mono;
 }
 
 /* Custom CSS end */

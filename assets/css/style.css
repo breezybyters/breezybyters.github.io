@@ -4370,39 +4370,36 @@ video {
   transition-timing-function:cubic-bezier(0, 0, 0.2, 1)
 }
 
-font-family: ui-sans-serif,
-system-ui,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-Apple Color Emoji,
-Segoe UI Emoji,
-NotoColorEmoji,
-Segoe UI Symbol,
-Android Emoji,
-EmojiSymbols;
-
 /* Custom CSS */
 
-.prose :where(h1):not(:where([class~="not-prose"] *)) {
-  color: white !important;
+@font-face {
+  font-family: "Primal";
+
+  src: url("/fonts/Primal.otf") format("opentype");
+}
+
+.font-primal{
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Primal";
+  /* @apply tracking-tighter; */
+  letter-spacing: -0.14em
 }
 
 html {
   scroll-snap-type: y mandatory;
 }
 
-.card-box {
-  scroll-snap-align: center;
+/* scroll snap if desktop */
+
+@media (min-width: 768px) {
+  .scroll-snap {
+    scroll-snap-align: center;
+  }
 }
 
 body {
   transition: all 0.5s ease;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Custom CSS end */
