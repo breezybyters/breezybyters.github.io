@@ -3,10 +3,8 @@
 <script src="{{ $alpine.RelPermalink }}" defer></script>
 {{ $darkmode := resources.Get "js/darkmode.js" | js.Build }}
 <script src="{{ $darkmode.RelPermalink }}" defer></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+{{ $aos := resources.Get "js/aos.js" | js.Build }}
+<script src="{{ $aos.RelPermalink }}" defer></script>
 <footer class="bg-gray-900">
     <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
@@ -15,15 +13,11 @@
             </div>
 
             <div class="px-5 py-2">
-                <a href="/categories/blog/" class="text-base text-gray-400 hover:text-gray-300">Blog</a>
+                <a href="/categories/projects/" class="text-base text-gray-400 hover:text-gray-300">Projects</a>
             </div>
 
             <div class="px-5 py-2">
                 <a href="/categories/news/" class="text-base text-gray-400 hover:text-gray-300">News</a>
-            </div>
-
-            <div class="px-5 py-2">
-                <a href="/prose/" class="text-base text-gray-400 hover:text-gray-300">Prose</a>
             </div>
 
             <div class="px-5 py-2">

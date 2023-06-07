@@ -10,12 +10,14 @@
     "concurrently": "^7.6.0",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9"
   },
   "scripts": {
     "start": "concurrently npm:watch:*",
     "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
     "watch:hugo": "hugo server",
+    "watch:vt": "vite",
     "build": "hugo --minify",
     "test": "hugo"
   },
@@ -44,6 +46,7 @@
   "homepage": "https://github.com/nusserstudios/tailbliss",
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "postcss-import": "^15.1.0"
+    "postcss-import": "^15.1.0",
+    "three": "^0.153.0"
   }
 }
