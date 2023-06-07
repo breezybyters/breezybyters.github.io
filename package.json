@@ -17,8 +17,9 @@
     "start": "concurrently npm:watch:*",
     "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
     "watch:hugo": "hugo server",
-    "watch:vt": "vite",
-    "build": "hugo --minify",
+    "build": "npm run build:tw && npm run build:hugo",
+    "build:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css",
+    "build:hugo": "hugo --minify",
     "test": "hugo"
   },
   "repository": {

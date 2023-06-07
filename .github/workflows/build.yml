@@ -1,11 +1,11 @@
-name: Build and deploy GitHub pages
+name: Build
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build_and_debloy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
