@@ -3098,7 +3098,7 @@ video {
   font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-family: "Primal";
   /* @apply tracking-tighter; */
-  letter-spacing: -0.130em
+  letter-spacing: -0.14em
 }
 
 * {
