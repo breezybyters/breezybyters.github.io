@@ -3101,8 +3101,11 @@ video {
   letter-spacing: -0.130em
 }
 
-html {
+* {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 5rem; */
+  /* scroll-padding-bottom: 5rem; */
 }
 
 /* scroll snap if desktop */
@@ -3125,6 +3128,46 @@ body {
     display: none;
   }
 }
+
+/* scroll bar */
+
+/* /1* For Firefox *1/ */
+
+/* * { */
+
+/*   scrollbar-width: thin; */
+
+/* } */
+
+/* /1* For other browsers (e.g., Chrome, Edge, Safari) *1/ */
+
+/* ::-webkit-scrollbar { */
+
+/*   width: 5px; */
+
+/* } */
+
+/* ::-webkit-scrollbar-track { */
+
+/*   background-color: #f0f0f0; */
+
+/*   border-radius: 5px; */
+
+/* } */
+
+/* ::-webkit-scrollbar-thumb { */
+
+/*   background-color: #888; */
+
+/*   border-radius: 5px; */
+
+/* } */
+
+/* ::-webkit-scrollbar-thumb:hover { */
+
+/*   background-color: #555; */
+
+/* } */
 
 /* Custom CSS end */
 
