@@ -24,7 +24,7 @@ html {
 }
 
 /* scroll snap if desktop */
-@media (min-width: 768px) {
+@media (min-width: 1023px), (min-height: 913px)  {
     .scroll-snap {
         scroll-snap-align: center;
     }
@@ -33,6 +33,13 @@ html {
 body {
     transition: all 0.5s ease;
     @apply font-mono;
+}
+
+/* hide blob animation on mobile */
+@media (max-width: 1023px){
+    #blob-animation {
+        display: none;
+    }
 }
 
 /* Custom CSS end */

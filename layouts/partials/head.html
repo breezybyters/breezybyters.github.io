@@ -23,5 +23,6 @@
 {{ else }}
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono:wght@400;500;600;700&display=swap" />
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 {{ end }}
