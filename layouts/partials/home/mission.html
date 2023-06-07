@@ -20,7 +20,7 @@
             <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
                 <!-- Testimonial card-->
                 <div class="relative pt-64 pb-10 overflow-hidden shadow-xl rounded-2xl">
-                    {{ $missionimage := resources.Get "images/pages/our-mission.png" }}
+                    {{ $missionimage := resources.Get "images/pages/our-mission.jpg" }}
                     {{ with $missionimage }}
                     {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
                     <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
