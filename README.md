@@ -14,7 +14,7 @@ yarn start # for live development
 yarn build # to generate the site
 ```
 
-### Using yarn
+### Using npm
 ```bash
 git clone https://github.com/breezybyters/breezybyters.github.io.git
 npm install
