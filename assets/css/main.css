@@ -40,7 +40,7 @@ body {
     display: none;
 }
 
-div {
+.scroll-snap {
     overflow-x: hidden;
 }
 
