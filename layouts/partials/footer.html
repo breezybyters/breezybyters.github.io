@@ -8,11 +8,7 @@
 {{ $blob := resources.Get "js/blob.js" | js.Build }}
 <script src="{{ $blob.RelPermalink }}" defer></script>
 
-<div class="fixed bottom-0 left-0 w-full h-1 bg-gray-300 dark:bg-gray-700">
-  <div class="h-full bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400" id="progress-bar"></div>
-</div>
-{{ $progress := resources.Get "js/progress.js" | js.Build }}
-<script src="{{ $progress.RelPermalink }}"></script>
+{{ partial "progress" . }}
 
 <footer class="bg-gray-900">
     <div class="max-w-md px-4 py-12 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
