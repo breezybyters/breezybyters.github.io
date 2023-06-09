@@ -6,6 +6,10 @@
 
 /* Custom CSS */
 
+* {
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: "Primal";
    src: url("/fonts/Primal.otf") format("opentype");
@@ -19,14 +23,13 @@
 
 }
 
-* {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    /* scroll-padding-top: 5rem; */
-    /* scroll-padding-bottom: 5rem; */
+@supports (scroll-snap-type: y mandatory) {
+    * {
+        scroll-snap-type: y mandatory;
+    }
 }
 
-/* scroll snap if desktop */
+/* scroll only snap if desktop */
 @media (min-width: 1023px), (min-height: 913px)  {
     .scroll-snap {
         scroll-snap-align: center;
@@ -38,37 +41,20 @@ body {
     @apply font-mono;
 }
 
-/* hide blob animation on mobile */
-@media (max-width: 1023px){
-    #blob-animation {
-        display: none;
-    }
+/* /1* hide blob animation on mobile *1/ */
+/* @media (max-width: 1023px){ */
+/*     #blob-animation { */
+/*         display: none; */
+/*     } */
+/* } */
+
+/* Hide scroll bar on Firefox */
+* {
+    scrollbar-width: none;
 }
-
-/* scroll bar */
-
-/* /1* For Firefox *1/ */
-/* * { */
-/*   scrollbar-width: thin; */
-/* } */
-
-/* /1* For other browsers (e.g., Chrome, Edge, Safari) *1/ */
-/* ::-webkit-scrollbar { */
-/*   width: 5px; */
-/* } */
-
-/* ::-webkit-scrollbar-track { */
-/*   background-color: #f0f0f0; */
-/*   border-radius: 5px; */
-/* } */
-
-/* ::-webkit-scrollbar-thumb { */
-/*   background-color: #888; */
-/*   border-radius: 5px; */
-/* } */
-
-/* ::-webkit-scrollbar-thumb:hover { */
-/*   background-color: #555; */
-/* } */
+/* Hide scroll bar on Chromium */
+::-webkit-scrollbar {
+    display: none;
+}
 
 /* Custom CSS end */
