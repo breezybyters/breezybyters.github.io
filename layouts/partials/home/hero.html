@@ -1,66 +1,35 @@
-<div class="overflow-hidden sm:pt-6 lg:relative scroll-snap">
-    <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8" data-aos="fade-right">
-        <div>
-            <div class="md:mt-8">
-                <div class="mt-6 sm:max-w-xl">
-                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-                        Satisfied Clients
-                    </h1>
-                    <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus non enim commodo
-                        tincidunt vel in nulla. Aenean pretium dolor non ultricies bibendum. Etiam quis blandit
-                        enim. Nunc condimentum ut lorem in faucibus. Phasellus varius ligula et commodo tristique.
-                        Nunc sodales nisl nec
-                        laoreet vehicula. Donec velit nibh, sollicitudin at nulla a, egestas dignissim eros. Sed
-                        lacinia hendrerit interdum.
-                        Vestibulum pellentesque sem venenatis nisl tempor accumsan sit amet tempus felis. Mauris leo
-                        diam, porttitor nec
-                        bibendum id, tempus ac nulla. Etiam congue ornare erat at convallis. Donec in nisi dapibus,
-                        mattis risus vel, imperdiet enim. Donec
-                        fermentum sit amet tortor nec tincidunt. Nam nec lectus tortor. Nunc sit amet laoreet orci,
-                        porta ornare massa. Phasellus
-                        eget lorem mi. Nam eleifend ultricies sapien, quis mollis leo bibendum at. Quisque viverra
-                        lorem sit amet magna aliquet, et dignissim arcu eleifend.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="bg-gray-200 dark:bg-gray-900 scroll-snap">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto">
+        <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
+            <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0" data-aos="fade-right">
+                <h1
+                    class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white uppercase font-primal">
+                    {{ .Site.Title }}</h1>
+                <h2 class="pb-2 text-3xl font-light text-gray-800 dark:text-gray-300 md:text-4xl">
+                    {{ .Site.Params.description }}
+                </h2>
+                <a href="#"
+                    class="block py-4 mx-auto space-x-4 sm:inline-flex md:inline-flex sm:text-center sm:block">
+                    <span
+                        class="rounded bg-gray-50 px-2.5 py-1 text-sm font-bold text-gray-900 block max-w-fit mx-auto md:min-w-fit mb-2">
+                        Order Now
+                    </span>
+                    <span
+                        class="inline-flex items-center mb-2 space-x-1 text-sm font-medium text-gray-800 dark:text-white md:min-w-fit">
+                        <span>Anything from coding to deploying</span>
+                        <!-- Heroicon name: mini/chevron-right -->
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </a>
+                <p class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50">At Breezy Byters, we believe in the transformative power of technology and its ability to create new opportunities for businesses and entrepreneurs. Our primary goal is to harness this potential by designing and implementing innovative, tailor-made solutions that streamline processes, enhance efficiency, and fuel growth across various industries. We strive to be at the forefront of the ever-evolving technological landscape, combining our passion for progress with a commitment to excellence.</p>
 
-    <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-        <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" data-aos="fade-left">
-            <div class="hidden sm:block">
-                <div
-                    class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full">
-                </div>
-                <svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none"
-                    viewBox="0 0 404 392" loading="lazy">
-                    <defs>
-                        <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20"
-                            patternUnits="userSpaceOnUse">
-                            <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60"
-                                fill="currentColor" />
-                        </pattern>
-                    </defs>
-                    <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
-                </svg>
             </div>
-            <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                {{ $heroOne := resources.GetMatch "images/pages/hacktoberfest.jpg" }}
-
-                {{ $tiny := ($heroOne.Fit "480x280 q80") }}
-                {{ $small := ($heroOne.Fit "768x280 q80") }}
-                {{ $medium := ($heroOne.Fit "1024x280 q80") }}
-                {{ $large := ($heroOne.Fit "1374x1000 q80") }}
-
-                <img srcset="
-                    {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
-                    {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
-                    {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
-                    {{- with $large.RelPermalink -}}, {{.}} 1374w{{- end -}}" src="{{ $heroOne.RelPermalink }}"
-                    alt="TailBliss Hacktoberfest Image"
-                    class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
-            </div>
+            <div id="blob-animation" class="col-span-6 h-full" data-aos="fade-in"></div>
         </div>
     </div>
 </div>
