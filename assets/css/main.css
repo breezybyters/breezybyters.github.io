@@ -6,10 +6,6 @@
 
 /* Custom CSS */
 
-* {
-    overflow-x: hidden;
-}
-
 @font-face {
     font-family: "Primal";
    src: url("/fonts/Primal.otf") format("opentype");
@@ -21,12 +17,6 @@
     /* @apply tracking-tighter; */
     letter-spacing: -0.14em;
 
-}
-
-@supports (scroll-snap-type: y mandatory) {
-    * {
-        scroll-snap-type: y mandatory;
-    }
 }
 
 /* scroll only snap if desktop */
@@ -41,13 +31,6 @@ body {
     @apply font-mono;
 }
 
-/* /1* hide blob animation on mobile *1/ */
-/* @media (max-width: 1023px){ */
-/*     #blob-animation { */
-/*         display: none; */
-/*     } */
-/* } */
-
 /* Hide scroll bar on Firefox */
 * {
     scrollbar-width: none;
@@ -55,6 +38,10 @@ body {
 /* Hide scroll bar on Chromium */
 ::-webkit-scrollbar {
     display: none;
+}
+
+div {
+    overflow-x: hidden;
 }
 
 /* Custom CSS end */
