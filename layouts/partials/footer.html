@@ -9,7 +9,7 @@
 <script src="{{ $blob.RelPermalink }}" defer></script>
 
 <div class="fixed bottom-0 left-0 w-full h-1 bg-gray-300 dark:bg-gray-700">
-  <div class="h-full bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 dark:from-pink-400 dark:via-purple-400 dark:to-blue-400" id="progress-bar" style="width: 0.1%"></div>
+  <div class="h-full bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400" id="progress-bar" style="width: 0.1%"></div>
 </div>
 {{ $progress := resources.Get "js/progress.js" | js.Build }}
 <script src="{{ $progress.RelPermalink }}"></script>
