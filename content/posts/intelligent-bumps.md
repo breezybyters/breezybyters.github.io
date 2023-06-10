@@ -3,12 +3,13 @@ title: "Intelligent Bumps"
 date: 2022-04-17
 draft: false
 language: en
-featured_image: ../assets/images/featured/featured-img-placeholder.png
-summary: Intelligent Bumps is an innovative embedded system that improves car safety and driving experience by predicting road bumps and adjusting vehicle speed.
+featured_image: ../assets/images/posts/bump.jpg
+summary: "Intelligent Bumps is an innovative embedded system that improves car safety and driving experience by predicting road bumps and adjusting vehicle speed. This technology offers enhanced safety, reduced vehicle wear, and increased comfort."
+
 author: Younis Tarek
 authorimage: ../assets/images/global/younis-tarek.jpg
 categories: projects
-tags: [ c++, Embedded Systems ]
+tags: [ C++, Embedded Systems ]
 ---
 # Intelligent Bumps: Revolutionizing Car Safety with Embedded Systems
 
