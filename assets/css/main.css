@@ -1,5 +1,7 @@
 /* assets */ 
 @import "aos/dist/aos.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -42,6 +44,14 @@ body {
 
 .scroll-snap {
     overflow-x: hidden;
+}
+
+.slider {
+  margin: 0 -5px; /* Add negative margin to the container to compensate for the padding */
+}
+
+.slide {
+  padding: 0 5px; /* Add padding to the individual slides */
 }
 
 /* Custom CSS end */

@@ -46,7 +46,9 @@
   "homepage": "https://github.com/nusserstudios/tailbliss",
   "dependencies": {
     "aos": "^3.0.0-beta.6",
+    "jquery": "^3.7.0",
     "noisejs": "^2.1.0",
+    "slick-carousel": "^1.8.1",
     "three": "^0.153.0"
   }
 }

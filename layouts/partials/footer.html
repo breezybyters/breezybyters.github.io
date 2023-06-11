@@ -7,6 +7,8 @@
 <script src="{{ $scroll.RelPermalink }}" defer></script>
 {{ $blob := resources.Get "js/blob.js" | js.Build }}
 <script src="{{ $blob.RelPermalink }}" defer></script>
+{{ $slick := resources.Get "js/slick.js" | js.Build }}
+<script src="{{ $slick.RelPermalink }}" defer></script>
 
 {{ partial "progress" . }}
 

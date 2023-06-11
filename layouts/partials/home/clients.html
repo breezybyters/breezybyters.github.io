@@ -9,51 +9,52 @@
             </h2>
         </div>
 
+        <!-- Empty div for spacing -->
+        <div class="h-10"></div>
+
         <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
             <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
-                <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-1" x-ref="slides">
+                <div class="slider">
                     {{ $pages := where (.Paginator).Pages "Section" "clients" }}
                     {{ range $index, $page := $pages }}
-                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900" :class="{ 'hidden': {{ $index }} != slide }" x-transition>
-                        <div class="p-6">
-                            <div class="flex-1">
-                                <div class="flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-dark" height="4em" viewBox="0 0 448 512"><style>.icon-dark{fill:#f9fafb}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="4em" viewBox="0 0 448 512"><style>.icon{fill:#111827}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                                </div>
-                                <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
-                                    {{ .Params.testimonial }}
-                                </p>
-                            </div>
-                            <div class="flex items-center mt-6">
-                                <div class="flex-shrink-0">
-                                    <span class="sr-only">{{ .Params.name }}</span>
-                                    {{ with .Params.image }}
-                                    {{ with resources.Get . }}
-                                    {{ $clientimage := (.Resize "400x webp").RelPermalink }}
-                                    <img class="w-10 h-10 rounded-full" src="{{ $clientimage }}" alt="">
-                                        {{ end }}
-                                        {{ end }}
-                                </div>
-                                <div class="pt-1 ml-3">
-                                    <p class="text-sm font-bold text-gray-900 dark:text-white">
-                                        {{ .Params.name }}
-                                        {{ if .Params.position }}
-                                        <span class="font-medium">— {{ .Params.position }}</span>
-                                        {{ end }}
+                    <div class="slide">
+                        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
+                            <div class="p-6">
+                                <div class="flex-1">
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-dark" height="4em" viewBox="0 0 448 512"><style>.icon-dark{fill:#f9fafb}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="4em" viewBox="0 0 448 512"><style>.icon{fill:#111827}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
+                                        {{ .Params.testimonial }}
                                     </p>
-                                    <div class="flex space-x-1 text-sm text-gray-500 dark:text-white">
-                                        <time datetime="2020-02-12">{{ .Date.Format "2006-01-02" }}</time>
+                                </div>
+                                <div class="flex items-center mt-6">
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">{{ .Params.name }}</span>
+                                        {{ with .Params.image }}
+                                        {{ with resources.Get . }}
+                                        {{ $clientimage := (.Resize "400x webp").RelPermalink }}
+                                        <img class="w-10 h-10 rounded-full" src="{{ $clientimage }}" alt="">
+                                            {{ end }}
+                                            {{ end }}
+                                    </div>
+                                    <div class="pt-1 ml-3">
+                                        <p class="text-sm font-bold text-gray-900 dark:text-white">
+                                            {{ .Params.name }}
+                                            {{ if .Params.position }}
+                                            <span class="font-medium">— {{ .Params.position }}</span>
+                                            {{ end }}
+                                        </p>
+                                        <div class="flex space-x-1 text-sm text-gray-500 dark:text-white">
+                                            <time datetime="2020-02-12">{{ .Date.Format "2006-01-02" }}</time>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {{ end }}
-                </div>
-                <div class="flex justify-center mt-8 space-x-4">
-                    <button class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" @click="slide = (slide - 1 + {{ len $pages }}) % {{ len $pages }}"><</button>
-                    <button class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" @click="slide = (slide + 1) % {{ len $pages }}">></button>
                 </div>
             </div>
         </div>
