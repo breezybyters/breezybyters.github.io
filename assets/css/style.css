@@ -2355,10 +2355,6 @@ video {
   transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
-.resize{
-  resize:both
-}
-
 .grid-cols-1{
   grid-template-columns:repeat(1, minmax(0, 1fr))
 }
@@ -2562,6 +2558,11 @@ video {
 .bg-zinc-100{
   --tw-bg-opacity:1;
   background-color:rgb(244 244 245 / var(--tw-bg-opacity))
+}
+
+.bg-blue-600{
+  --tw-bg-opacity:1;
+  background-color:rgb(37 99 235 / var(--tw-bg-opacity))
 }
 
 .bg-gradient-to-r{
@@ -3204,6 +3205,11 @@ body {
   background-color:rgb(30 32 36 / var(--tw-bg-opacity))
 }
 
+.hover\:bg-blue-500:hover{
+  --tw-bg-opacity:1;
+  background-color:rgb(59 130 246 / var(--tw-bg-opacity))
+}
+
 .hover\:text-black:hover{
   --tw-text-opacity:1;
   color:rgb(0 0 0 / var(--tw-text-opacity))
@@ -3292,6 +3298,11 @@ body {
 .focus\:ring-white:focus{
   --tw-ring-opacity:1;
   --tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))
+}
+
+.focus\:ring-blue-500:focus{
+  --tw-ring-opacity:1;
+  --tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity))
 }
 
 .focus\:ring-offset-2:focus{
@@ -3667,6 +3678,10 @@ body {
     grid-template-columns:repeat(3, minmax(0, 1fr))
   }
 
+  .md\:grid-cols-2{
+    grid-template-columns:repeat(2, minmax(0, 1fr))
+  }
+
   .md\:flex-row{
     flex-direction:row
   }
@@ -3834,6 +3849,10 @@ body {
 
   .lg\:grid-cols-2{
     grid-template-columns:repeat(2, minmax(0, 1fr))
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns:repeat(3, minmax(0, 1fr))
   }
 
   .lg\:items-start{

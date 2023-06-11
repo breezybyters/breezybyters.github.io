@@ -1,4 +1,4 @@
-<div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 scroll-snap">
+<div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12 scroll-snap" x-data="{ slide: 0 }">
     <div class="absolute inset-0">
         <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
     </div>
@@ -11,15 +11,15 @@
 
         <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
             <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
-                <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3">
-                    <!-- Replace the content inside the loop with your satisfied client data -->
-                    {{ range where (.Paginator).Pages "Section" "clients" }}
-                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
+                <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none grid-cols-1" x-ref="slides">
+                    {{ $pages := where (.Paginator).Pages "Section" "clients" }}
+                    {{ range $index, $page := $pages }}
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900" :class="{ 'hidden': {{ $index }} != slide }" x-transition>
                         <div class="p-6">
                             <div class="flex-1">
                                 <div class="flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-dark" height="4em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>.icon-dark{fill:#f9fafb}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="4em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>.icon{fill:#111827}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-dark" height="4em" viewBox="0 0 448 512"><style>.icon-dark{fill:#f9fafb}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="4em" viewBox="0 0 448 512"><style>.icon{fill:#111827}</style><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
                                 </div>
                                 <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
                                     {{ .Params.testimonial }}
@@ -50,7 +50,10 @@
                         </div>
                     </div>
                     {{ end }}
-                    <!-- End of loop -->
+                </div>
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" @click="slide = (slide - 1 + {{ len $pages }}) % {{ len $pages }}"><</button>
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" @click="slide = (slide + 1) % {{ len $pages }}">></button>
                 </div>
             </div>
         </div>
