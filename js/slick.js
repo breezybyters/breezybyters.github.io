@@ -8337,12 +8337,22 @@
   var import_jquery = __toESM(require_jquery());
   var import_slick_carousel = __toESM(require_slick());
   (0, import_jquery.default)(".slider").slick({
-    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 2e3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false
+        }
+      }
+    ]
   });
 })();
 /*! Bundled license information:
